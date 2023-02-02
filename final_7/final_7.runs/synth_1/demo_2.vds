@@ -1,0 +1,825 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jan 13 02:31:40 2023
+# Process ID: 13408
+# Current directory: C:/Users/user/final_7/final_7.runs/synth_1
+# Command line: vivado.exe -log demo_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source demo_2.tcl
+# Log file: C:/Users/user/final_7/final_7.runs/synth_1/demo_2.vds
+# Journal file: C:/Users/user/final_7/final_7.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source demo_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/OneDrive - 清華大學/桌面/final_thing/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top demo_2 -part xc7a35tcpg236-1
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'KeyboardCtrl_0' is locked:
+* IP definition 'KeyboardCtrl (1.0)' for IP 'KeyboardCtrl_0' (customized with software release 2019.2) was not found in the IP Catalog.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16772 
+WARNING: [Synth 8-2611] redeclaration of ansi port state is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:208]
+WARNING: [Synth 8-2611] redeclaration of ansi port lucy_pixel_addr is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:243]
+WARNING: [Synth 8-2611] redeclaration of ansi port background_pixel_addr is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:246]
+WARNING: [Synth 8-2611] redeclaration of ansi port init_title_pixel_addr is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:249]
+WARNING: [Synth 8-2611] redeclaration of ansi port end_title_pixel_addr is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:250]
+WARNING: [Synth 8-2611] redeclaration of ansi port space_pixel_addr is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:251]
+WARNING: [Synth 8-2611] redeclaration of ansi port crown_pixel_addr is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:252]
+WARNING: [Synth 8-2611] redeclaration of ansi port restart_pixel_addr is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:253]
+WARNING: [Synth 8-2611] redeclaration of ansi port print_what is not allowed [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:256]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 854.539 ; gain = 241.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'demo_2' [C:/Users/user/final_7/final_7.srcs/sources_1/new/top.v:1]
+	Parameter KEY_CODES bound to: 36'b000011101000011100000011011000100011 
+	Parameter PRINT_COLOR bound to: 2'b00 
+	Parameter PRINT_LUCY bound to: 2'b01 
+	Parameter PRINT_BACKGROUND bound to: 2'b10 
+	Parameter PRINT_INIT_TITLE bound to: 3'b011 
+	Parameter PRINT_END_TITLE bound to: 3'b100 
+	Parameter PRINT_SPACE bound to: 3'b101 
+	Parameter PRINT_CROWN bound to: 3'b110 
+	Parameter PRINT_RESTART bound to: 3'b111 
+INFO: [Synth 8-6157] synthesizing module 'my_clock_divider' [C:/Users/user/final_7/final_7.srcs/sources_1/new/clock_divider.v:18]
+	Parameter DIVISOR bound to: 28'b0000001011101000010101001100 
+INFO: [Synth 8-6155] done synthesizing module 'my_clock_divider' (1#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/clock_divider.v:18]
+INFO: [Synth 8-6157] synthesizing module 'player_control' [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/player_control.v:1]
+	Parameter LEN bound to: 768 - type: integer 
+	Parameter INIT bound to: 3'b000 
+	Parameter GAME bound to: 3'b001 
+	Parameter END bound to: 3'b010 
+INFO: [Synth 8-6155] done synthesizing module 'player_control' (2#1) [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/player_control.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'state' does not match port width (1) of module 'player_control' [C:/Users/user/final_7/final_7.srcs/sources_1/new/top.v:86]
+INFO: [Synth 8-6157] synthesizing module 'music_example' [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/music_example.v:11]
+	Parameter INIT bound to: 3'b000 
+	Parameter GAME bound to: 3'b001 
+	Parameter END bound to: 3'b010 
+INFO: [Synth 8-6155] done synthesizing module 'music_example' (3#1) [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/music_example.v:11]
+WARNING: [Synth 8-689] width (3) of port connection 'state' does not match port width (1) of module 'music_example' [C:/Users/user/final_7/final_7.srcs/sources_1/new/top.v:93]
+INFO: [Synth 8-6157] synthesizing module 'note_gen' [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/note_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'note_gen' (4#1) [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/note_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'speaker_control' [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/speaker_control.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/speaker_control.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'speaker_control' (5#1) [C:/Users/user/final_7/final_7.srcs/sources_1/imports/lab8_template/speaker_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'my_clock_divider__parameterized0' [C:/Users/user/final_7/final_7.srcs/sources_1/new/clock_divider.v:18]
+	Parameter DIVISOR bound to: 28'b0000001111010000100100000000 
+INFO: [Synth 8-6155] done synthesizing module 'my_clock_divider__parameterized0' (5#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/clock_divider.v:18]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/user/final_7/final_7.srcs/sources_1/new/clock_divider.v:1]
+	Parameter n bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (6#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/clock_divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:1]
+	Parameter obstacle_n bound to: 31 - type: integer 
+	Parameter obstacle_pos_x bound to: 341'b00000000000000100111010000110110100000100101000011011010000111001100000101101000011011010000011001100001101101000100100000000110001000000000011000001011010000010110100000000011000001101010000110000000001000000000100011010000100010100001101010000001011110000000001100001010101000100010000000110001000000111101000000000110000111010100000101011 
+	Parameter obstacle_pos_y bound to: 341'b00000000000000000000000000100011000001100100000011001000000110010000001101011000100101100001001110000010011101000101011010001011101000011010010000110100100001111110100100110110001010000000010110010000101101011001011110000011000110000110001100001110011110011101011000111110111001111101110100001111101001001010010100001100101000011001011000010 
+	Parameter obstacle_size_x bound to: 341'b00000000011000000000110000000111000000001110000000001100000000100000000000110000000110010000000100000000000101000000011010000000101100000010010000000110010000001100100000010010000000100110000001000000000110000000000100000000001000100000010100000000100100000001100000000011001000000101010000010000100000100110000001010000000010100000001001010 
+	Parameter obstacle_size_y bound to: 341'b01011010000010110100000000000011100000000111000000110110000000011100001010011000000001110000010001000000111011000000001110000001111000000000111000000001110000001011100000000111000000100110000000011100000001110000000010000000000011100000001000000000110110000001010100000001101000000011010000000111000000010101000010010100000100101000000001110 
+	Parameter KEY_CODES bound to: 54'b000011101000011100000011011000100011000101101000101001 
+	Parameter MAP_H bound to: 11'b00011110000 
+	Parameter MAP_W bound to: 11'b00010100000 
+	Parameter LUCY_H bound to: 11'b00000001100 
+	Parameter LUCY_W bound to: 11'b00000001001 
+	Parameter MAP_INIT_Y bound to: 11'b00000000000 
+	Parameter MAP_INIT_X bound to: 11'b00001010000 
+	Parameter LUCY_INIT_Y bound to: 11'b01010110110 
+	Parameter LUCY_INIT_X bound to: 11'b00001010000 
+	Parameter gravity bound to: 11'sb00000000001 
+	Parameter terminal_velocityY bound to: 11'sb00000001100 
+	Parameter LEVEL_2 bound to: 2'b10 
+	Parameter LEVEL_1 bound to: 2'b01 
+	Parameter LEVEL_0 bound to: 2'b00 
+	Parameter INIT bound to: 3'b000 
+	Parameter GAME bound to: 3'b001 
+	Parameter END bound to: 3'b010 
+	Parameter FACE_R bound to: 0 - type: integer 
+	Parameter FACE_L bound to: 1 - type: integer 
+	Parameter PRINT_COLOR bound to: 3'b000 
+	Parameter PRINT_LUCY bound to: 3'b001 
+	Parameter PRINT_BACKGROUND bound to: 3'b010 
+	Parameter PRINT_INIT_TITLE bound to: 3'b011 
+	Parameter PRINT_END_TITLE bound to: 3'b100 
+	Parameter PRINT_SPACE bound to: 3'b101 
+	Parameter PRINT_CROWN bound to: 3'b110 
+	Parameter PRINT_RESTART bound to: 3'b111 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:505]
+INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (7#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (8#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (10#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (11#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (12#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_5' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_5' (13#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_6' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_6' (14#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/blk_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/user/final_7/final_7.srcs/sources_1/new/vga.v:6]
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 16 - type: integer 
+	Parameter HS bound to: 96 - type: integer 
+	Parameter HB bound to: 48 - type: integer 
+	Parameter HT bound to: 800 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VS bound to: 2 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VT bound to: 525 - type: integer 
+	Parameter hsync_default bound to: 1'b1 
+	Parameter vsync_default bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (15#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/vga.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/user/final_7/final_7.srcs/sources_1/new/keyboard_decoder.v:1]
+	Parameter INIT bound to: 2'b00 
+	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
+	Parameter GET_SIGNAL_DOWN bound to: 2'b10 
+	Parameter WAIT_RELEASE bound to: 2'b11 
+	Parameter IS_INIT bound to: 8'b10101010 
+	Parameter IS_EXTEND bound to: 8'b11100000 
+	Parameter IS_BREAK bound to: 8'b11110000 
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (16#1) [C:/Users/user/final_7/final_7.runs/synth_1/.Xil/Vivado-13408-LAPTOP-799OM31Q/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'onepulse' [C:/Users/user/final_7/final_7.srcs/sources_1/new/onepulse.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'onepulse' (17#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/onepulse.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/user/final_7/final_7.srcs/sources_1/new/keyboard_decoder.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (18#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/keyboard_decoder.v:1]
+WARNING: [Synth 8-3848] Net data in module/entity demo_2 does not have driver. [C:/Users/user/final_7/final_7.srcs/sources_1/new/top.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'demo_2' (19#1) [C:/Users/user/final_7/final_7.srcs/sources_1/new/top.v:1]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[63]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[62]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[61]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[60]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[59]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[58]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[57]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[56]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[55]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[54]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[53]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[52]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[51]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[50]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[49]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[48]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[47]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[46]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[44]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[43]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[42]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[40]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[39]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[38]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[37]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[36]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[34]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[33]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[32]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[31]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[30]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[27]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[26]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[25]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[24]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[23]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[22]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[21]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[20]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[19]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[18]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[17]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[16]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[15]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[14]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[13]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[12]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[11]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[10]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[9]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[8]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[7]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[6]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[5]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[4]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[3]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[2]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[1]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[0]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_valid
+WARNING: [Synth 8-3331] design note_gen has unconnected port volume[2]
+WARNING: [Synth 8-3331] design note_gen has unconnected port volume[1]
+WARNING: [Synth 8-3331] design note_gen has unconnected port volume[0]
+WARNING: [Synth 8-3331] design player_control has unconnected port _play
+WARNING: [Synth 8-3331] design player_control has unconnected port _slow
+WARNING: [Synth 8-3331] design player_control has unconnected port _mode
+WARNING: [Synth 8-3331] design player_control has unconnected port state
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 938.777 ; gain = 325.605
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 938.777 ; gain = 325.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 938.777 ; gain = 325.605
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 938.777 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'nolabel_line275/inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'nolabel_line275/inst'
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'blk_mem_gen_0_inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'blk_mem_gen_0_inst'
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'blk_mem_gen_1_inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'blk_mem_gen_1_inst'
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'blk_mem_gen_2_inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'blk_mem_gen_2_inst'
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'blk_mem_gen_3_inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'blk_mem_gen_3_inst'
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'blk_mem_gen_4_inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'blk_mem_gen_4_inst'
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'blk_mem_gen_5_inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'blk_mem_gen_5_inst'
+Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'blk_mem_gen_6_inst'
+Finished Parsing XDC File [c:/Users/user/final_7/final_7.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'blk_mem_gen_6_inst'
+Parsing XDC File [C:/Users/user/final_7/final_7.srcs/constrs_1/new/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/user/final_7/final_7.srcs/constrs_1/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/user/final_7/final_7.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/demo_2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/demo_2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1056.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1056.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1056.379 ; gain = 443.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1056.379 ; gain = 443.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  c:/Users/user/final_7/final_7.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  c:/Users/user/final_7/final_7.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/user/final_7/final_7.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/user/final_7/final_7.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for nolabel_line275/inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_0_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_1_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_2_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_3_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_4_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_5_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_6_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1056.379 ; gain = 443.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "toneL" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "toneR" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
+WARNING: [Synth 8-327] inferring latch for variable 'offset_y_reg' [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:507]
+WARNING: [Synth 8-327] inferring latch for variable 'search_reg' [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:626]
+WARNING: [Synth 8-327] inferring latch for variable 'print_what_reg' [C:/Users/user/final_7/final_7.srcs/sources_1/new/mem_addr_gen.v:799]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                               00 |                               00
+         WAIT_FOR_SIGNAL |                               01 |                               01
+         GET_SIGNAL_DOWN |                               10 |                               10
+            WAIT_RELEASE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.379 ; gain = 443.207
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 12    
+	   3 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 5     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	 770 Input     26 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	  34 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 233   
+	   5 Input     11 Bit        Muxes := 5     
+	   4 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 35    
+	   3 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 155   
+	   4 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module demo_2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 12    
+Module my_clock_divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module player_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+Module music_example 
+Detailed RTL Component Info : 
++---Muxes : 
+	 770 Input     26 Bit        Muxes := 2     
+Module note_gen 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+Module speaker_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+Module my_clock_divider__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module mem_addr_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 12    
+	   3 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 5     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  34 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 233   
+	   5 Input     11 Bit        Muxes := 5     
+	   4 Input     11 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 23    
+	   3 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 146   
+	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+Module vga_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module onepulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module KeyboardDecoder 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP lucy_pixel_addr2, operation Mode is: (A:0x12)*B.
+DSP Report: operator lucy_pixel_addr2 is absorbed into DSP lucy_pixel_addr2.
+DSP Report: Generating DSP lucy_pixel_addr0, operation Mode is: PCIN+A*(B:0x48).
+DSP Report: operator lucy_pixel_addr0 is absorbed into DSP lucy_pixel_addr0.
+DSP Report: operator lucy_pixel_addr1 is absorbed into DSP lucy_pixel_addr0.
+DSP Report: Generating DSP lucy_pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff60).
+DSP Report: operator lucy_pixel_addr0 is absorbed into DSP lucy_pixel_addr0.
+DSP Report: Generating DSP background_pixel_addr1, operation Mode is: (D+A)*(B:0xa0).
+DSP Report: operator background_pixel_addr1 is absorbed into DSP background_pixel_addr1.
+DSP Report: operator background_pixel_addr2 is absorbed into DSP background_pixel_addr1.
+DSP Report: Generating DSP background_pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffffb0).
+DSP Report: operator background_pixel_addr0 is absorbed into DSP background_pixel_addr0.
+DSP Report: Generating DSP init_title_pixel_addr1, operation Mode is: A*(B:0x78).
+DSP Report: operator init_title_pixel_addr1 is absorbed into DSP init_title_pixel_addr1.
+DSP Report: Generating DSP init_title_pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff9c).
+DSP Report: operator init_title_pixel_addr0 is absorbed into DSP init_title_pixel_addr0.
+DSP Report: Generating DSP space_pixel_addr1, operation Mode is: A*(B:0x38).
+DSP Report: operator space_pixel_addr1 is absorbed into DSP space_pixel_addr1.
+DSP Report: Generating DSP space_pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff7c).
+DSP Report: operator space_pixel_addr0 is absorbed into DSP space_pixel_addr0.
+DSP Report: Generating DSP restart_pixel_addr1, operation Mode is: A*(B:0x60).
+DSP Report: operator restart_pixel_addr1 is absorbed into DSP restart_pixel_addr1.
+DSP Report: Generating DSP restart_pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff91).
+DSP Report: operator restart_pixel_addr0 is absorbed into DSP restart_pixel_addr0.
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[63]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[62]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[61]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[60]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[59]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[58]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[57]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[56]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[55]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[54]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[53]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[52]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[51]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[50]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[49]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[48]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[47]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_down[46]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port key_valid
+WARNING: [Synth 8-3331] design note_gen has unconnected port volume[2]
+WARNING: [Synth 8-3331] design note_gen has unconnected port volume[1]
+WARNING: [Synth 8-3331] design note_gen has unconnected port volume[0]
+WARNING: [Synth 8-3331] design player_control has unconnected port _play
+WARNING: [Synth 8-3331] design player_control has unconnected port _slow
+WARNING: [Synth 8-3331] design player_control has unconnected port _mode
+WARNING: [Synth 8-3331] design player_control has unconnected port state
+INFO: [Synth 8-3886] merging instance 'playerCtrl_00/ibeat_reg[11]' (FDC) to 'playerCtrl_00/ibeat_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\playerCtrl_00/ibeat_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (mem_addr_gen_inst/\state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[1]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[2]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[3]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[4]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[5]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[6]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[7]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[8]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[9]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[10]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[11]' (FDC) to 'sc/audio_right_reg[12]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[12]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_right_reg[14]' (FDC) to 'sc/audio_right_reg[15]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[0]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[1]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[2]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[3]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[4]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[5]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[6]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[7]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[8]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[9]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[10]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[11]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[12]' (FDC) to 'sc/audio_right_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sc/audio_left_reg[14]' (FDC) to 'sc/audio_left_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sc/audio_right_reg[0] )
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/led_reg[10]' (FDC) to 'mem_addr_gen_inst/led_reg[11]'
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/offset_y_reg[0]' (LD) to 'mem_addr_gen_inst/offset_y_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/offset_y_reg[1]' (LD) to 'mem_addr_gen_inst/offset_y_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/offset_y_reg[2]' (LD) to 'mem_addr_gen_inst/offset_y_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/offset_y_reg[3]' (LD) to 'mem_addr_gen_inst/offset_y_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/offset_y_reg[5]' (LD) to 'mem_addr_gen_inst/offset_y_reg[6]'
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/offset_y_reg[6]' (LD) to 'mem_addr_gen_inst/offset_y_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mem_addr_gen_inst/offset_y_reg[9]' (LD) to 'mem_addr_gen_inst/offset_y_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (mem_addr_gen_inst/\offset_y_reg[10] )
+WARNING: [Synth 8-3332] Sequential element (offset_y_reg[10]) is unused and will be removed from module mem_addr_gen.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1170.766 ; gain = 557.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++-------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping                       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mem_addr_gen | (A:0x12)*B                        | 2      | 5      | -      | -      | 7      | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+A*(B:0x48)                   | 13     | 7      | -      | -      | 13     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xffffffffff60) | 30     | 10     | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | (D+A)*(B:0xa0)                    | 11     | 8      | -      | 9      | 20     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xffffffffffb0) | 30     | 9      | 8      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x78)                        | 12     | 7      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xffffffffff9c) | 30     | 9      | 8      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x38)                        | 10     | 6      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xffffffffff7c) | 30     | 9      | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x60)                        | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+(C:0xffffffffff91) | 30     | 9      | 8      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1170.766 ; gain = 557.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1170.766 ; gain = 557.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1225.215 ; gain = 612.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 1229.859 ; gain = 616.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 1229.859 ; gain = 616.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1229.859 ; gain = 616.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1229.859 ; gain = 616.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1229.859 ; gain = 616.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1229.859 ; gain = 616.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |blk_mem_gen_0  |         1|
+|2     |blk_mem_gen_1  |         1|
+|3     |blk_mem_gen_2  |         1|
+|4     |blk_mem_gen_3  |         1|
+|5     |blk_mem_gen_4  |         1|
+|6     |blk_mem_gen_5  |         1|
+|7     |blk_mem_gen_6  |         1|
+|8     |KeyboardCtrl_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |KeyboardCtrl_0 |     1|
+|2     |blk_mem_gen_0  |     1|
+|3     |blk_mem_gen_1  |     1|
+|4     |blk_mem_gen_2  |     1|
+|5     |blk_mem_gen_3  |     1|
+|6     |blk_mem_gen_4  |     1|
+|7     |blk_mem_gen_5  |     1|
+|8     |blk_mem_gen_6  |     1|
+|9     |BUFG           |     2|
+|10    |CARRY4         |   537|
+|11    |DSP48E1        |     5|
+|12    |DSP48E1_1      |     5|
+|13    |DSP48E1_2      |     1|
+|14    |LUT1           |    56|
+|15    |LUT2           |   948|
+|16    |LUT3           |   817|
+|17    |LUT4           |   718|
+|18    |LUT5           |   349|
+|19    |LUT6           |   969|
+|20    |MUXF7          |    19|
+|21    |FDCE           |   191|
+|22    |FDPE           |     8|
+|23    |FDRE           |    82|
+|24    |FDSE           |     2|
+|25    |LD             |     3|
+|26    |LDC            |     5|
+|27    |LDP            |     2|
+|28    |IBUF           |     2|
+|29    |OBUF           |    34|
++------+---------------+------+
+
+Report Instance Areas: 
++------+--------------------+---------------------------------+------+
+|      |Instance            |Module                           |Cells |
++------+--------------------+---------------------------------+------+
+|1     |top                 |                                 |  4851|
+|2     |  clk_wiz_0_inst    |clock_divider                    |     4|
+|3     |  mem_addr_gen_inst |mem_addr_gen                     |  1779|
+|4     |  myclkdiv1         |my_clock_divider                 |    48|
+|5     |  myclkdiv3         |my_clock_divider__parameterized0 |    47|
+|6     |  nolabel_line275   |KeyboardDecoder                  |    72|
+|7     |    op              |onepulse                         |     4|
+|8     |  noteGen_00        |note_gen                         |   134|
+|9     |  playerCtrl_00     |player_control                   |  1797|
+|10    |  sc                |speaker_control                  |   122|
+|11    |  vga_inst          |vga_controller                   |   298|
++------+--------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1229.859 ; gain = 616.688
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:17 . Memory (MB): peak = 1229.859 ; gain = 499.086
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1229.859 ; gain = 616.688
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1229.859 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 577 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1229.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  LD => LDCE: 3 instances
+  LDC => LDCE: 5 instances
+  LDP => LDPE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+102 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1229.859 ; gain = 891.223
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1229.859 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/user/final_7/final_7.runs/synth_1/demo_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file demo_2_utilization_synth.rpt -pb demo_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 13 02:33:15 2023...
